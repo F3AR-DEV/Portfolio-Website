@@ -29,6 +29,7 @@ const projects = [
         image: proyPortafolioImg,
         tags: ['Nuxt 3', 'Vue 3', 'TypeScript', 'Tailwind CSS', 'Vite'],
         reversed: false, // Alternating from previous
+        githubUrl: 'https://github.com/F3AR-DEV/Portfolio-Website',
     }
 ];
 </script>
