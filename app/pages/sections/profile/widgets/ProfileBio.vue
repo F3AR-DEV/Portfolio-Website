@@ -17,6 +17,6 @@ import AppButton from '~/shared/widgets/AppButton.vue';
             Me adapto a diferentes entornos y tecnologías según las necesidades del proyecto, manteniendo una actitud de
             aprendizaje constante y mejora continua.
         </p>
-        <AppButton href="/cv.pdf" download>Descargar CV</AppButton>
+        <AppButton href="/assets/pdf/CV_FreddAvilez.pdf" download>Descargar CV</AppButton>
     </div>
 </template>

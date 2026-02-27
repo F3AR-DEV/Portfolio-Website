@@ -32,7 +32,7 @@
                     </button> -->
 
                     <div class="h-6 w-px bg-gray-300 dark:bg-gray-700 mx-2"></div>
-                    <AppButton href="/cv.pdf" download class="ml-2">Descargar CV</AppButton>
+                    <AppButton href="/assets/pdf/CV_FreddAvilez.pdf" download class="ml-2">Descargar CV</AppButton>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -62,7 +62,7 @@
                                 <Icon v-else name="bi:moon-stars-fill" />
                             </button>
                         </div>
-                        <AppButton href="/cv.pdf" download size="sm">Descargar CV</AppButton>
+                        <AppButton href="/assets/pdf/CV_FreddAvilez.pdf" download size="sm">Descargar CV</AppButton>
                     </div>
                 </div>
             </div>
