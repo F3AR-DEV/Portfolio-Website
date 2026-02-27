@@ -1,0 +1,345 @@
+@import "tailwindcss";
+
+/* Variables de Tema */
+:root {
+  /* Default (Antes Dark) - Modo Oscuro por defecto */
+  --color-bg-primary: #0a0e1a;
+  --color-bg-secondary: #131827;
+  --color-bg-tertiary: #1e2738;
+  --color-accent-primary: #10b981;
+  --color-accent-secondary: #34d399;
+  --color-accent-hover: #059669;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #94a3b8;
+  --color-border-primary: #2d3748;
+  --color-border-secondary: #1e2738;
+  --color-card-bg: #1a2332;
+  --color-card-border: #2d3748;
+  --color-card-hover-border: #10b981;
+  --color-shadow-accent: rgba(16, 185, 129, 0.2);
+}
+
+.light {
+  /* Override (Antes Root) - Modo Claro opcional */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #fff8f0;
+  --color-bg-tertiary: #ffe8d6;
+  --color-accent-primary: #e67e22;
+  --color-accent-secondary: #f39c12;
+  --color-accent-hover: #d35400;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-tertiary: #7a7a7a;
+  --color-border-primary: #e0e0e0;
+  --color-border-secondary: #f5f5f5;
+  --color-card-bg: #ffffff;
+  --color-card-border: #eeeeee;
+  --color-card-hover-border: #e67e22;
+  --color-shadow-accent: rgba(230, 126, 34, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@layer components {
+  .app-container {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .section-zebra > *:nth-child(even) {
+    background-color: var(--color-bg-secondary);
+    @apply border-y;
+    border-color: var(--color-border-secondary);
+  }
+
+  .app-radius {
+    border-radius: 10px;
+  }
+
+  /* Default Dark Card Shadow */
+  .app-card {
+    background-color: var(--color-card-bg);
+    border-color: var(--color-card-border);
+    @apply border transition-all duration-300;
+    box-shadow:
+      0 1px 3px 0 rgba(0, 0, 0, 0.3),
+      0 1px 2px -1px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* Light Mode Override */
+  .light .app-card {
+    box-shadow:
+      0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .app-card:hover {
+    border-color: var(--color-card-hover-border);
+    box-shadow:
+      0 10px 15px -3px var(--color-shadow-accent),
+      0 4px 6px -4px var(--color-shadow-accent),
+      0 0 0 1px var(--color-card-hover-border);
+    transform: translateY(-2px);
+  }
+
+  .skill-card-badge {
+    background-color: var(--color-card-bg);
+    border-color: var(--color-card-border);
+    @apply border transition-all duration-300 rounded-[10px] group-hover:-translate-y-2 relative shadow-none! w-full flex justify-center p-2;
+  }
+
+  .skill-icon {
+    @apply w-10 h-10 object-contain;
+  }
+
+  .skill-label {
+    color: var(--color-text-secondary);
+    @apply mt-1 text-xs font-medium text-center leading-tight;
+  }
+
+  /* Global Typography */
+  .hero-title {
+    color: var(--color-text-primary);
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold mb-6;
+  }
+
+  .hero-text {
+    color: var(--color-text-secondary);
+    @apply text-lg sm:text-xl mb-8 leading-relaxed;
+  }
+
+  .section-title {
+    color: var(--color-text-primary);
+    @apply text-3xl sm:text-4xl font-bold mb-6 relative inline-block;
+  }
+
+  .section-title::after {
+    content: "";
+    background-color: var(--color-accent-primary);
+    @apply absolute -bottom-2 left-0 w-[70%] h-1 rounded-full;
+  }
+
+  .section-subtitle {
+    color: var(--color-text-secondary);
+    @apply text-lg mb-6 leading-relaxed;
+  }
+
+  .section-icon {
+    color: var(--color-accent-primary);
+    @apply text-xl mr-3;
+  }
+
+  .section-text {
+    color: var(--color-text-secondary);
+    @apply text-lg leading-relaxed;
+  }
+
+  .card-title {
+    color: var(--color-text-primary);
+    @apply text-xl font-bold;
+  }
+
+  .subsection-title {
+    color: var(--color-text-primary);
+    @apply text-lg font-semibold;
+  }
+
+  .body-text {
+    color: var(--color-text-secondary);
+    @apply text-base leading-relaxed;
+  }
+
+  .body-text-sm {
+    color: var(--color-text-secondary);
+    @apply text-sm leading-relaxed;
+  }
+
+  .meta-text {
+    color: var(--color-text-tertiary);
+    @apply text-sm;
+  }
+
+  .project-title {
+    color: var(--color-text-primary);
+    @apply text-2xl font-bold mb-4;
+  }
+
+  .tech-tag {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-secondary);
+    border-color: var(--color-border-primary);
+    @apply px-3 py-1 rounded-full text-xs font-medium border;
+  }
+
+  .contact-info {
+    color: var(--color-text-primary);
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight;
+  }
+
+  .social-link {
+    color: var(--color-text-tertiary);
+    @apply flex items-center justify-center p-2 transition-all duration-300 hover:-translate-y-1 rounded-lg;
+  }
+
+  .social-link:hover {
+    color: var(--color-accent-primary);
+  }
+
+  .hero-glow {
+    @apply transition-all duration-700 ease-in-out;
+    animation: hero-pulse 4s infinite ease-in-out;
+  }
+
+  .hero-glow:hover {
+    animation-play-state: paused;
+  }
+
+  /* Modo Default (Oscuro) */
+  :root .hero-glow {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+  }
+
+  :root .hero-glow:hover {
+    box-shadow: 0 0 45px rgba(16, 185, 129, 0.6);
+  }
+
+  /* Modo Light (Claro) */
+  .light .hero-glow {
+    box-shadow: 0 0 25px rgba(232, 155, 92, 0.3);
+  }
+
+  .light .hero-glow:hover {
+    box-shadow: 0 0 45px rgba(232, 155, 92, 0.6);
+  }
+
+  @keyframes hero-pulse {
+    0%,
+    100% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.1);
+    }
+  }
+
+  /* Button Variants */
+  .app-button-primary {
+    background: linear-gradient(
+      to right,
+      var(--color-accent-primary),
+      var(--color-accent-secondary)
+    );
+    color: white;
+    @apply shadow-md;
+  }
+
+  .app-button-primary:hover {
+    background: linear-gradient(to right, var(--color-accent-hover), var(--color-accent-primary));
+    @apply shadow-lg;
+  }
+
+  .app-button-outline {
+    border: 1px solid var(--color-border-primary);
+    color: var(--color-text-secondary);
+    background-color: transparent;
+  }
+
+  .app-button-outline:hover {
+    background-color: var(--color-bg-tertiary);
+  }
+
+  .app-button-ghost {
+    color: var(--color-text-secondary);
+    background-color: transparent;
+  }
+
+  .app-button-ghost:hover {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+  }
+
+  /* Header Styles */
+  .header-bg-scrolled {
+    background-color: rgba(2, 6, 23, 0.8);
+    border-color: var(--color-border-primary);
+  }
+
+  .light .header-bg-scrolled {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: var(--color-border-secondary);
+  }
+
+  .header-logo {
+    color: var(--color-text-primary);
+  }
+
+  .header-logo-accent {
+    color: var(--color-accent-primary);
+  }
+
+  .header-nav-link {
+    color: var(--color-text-secondary);
+    @apply text-sm font-medium transition-colors relative;
+  }
+
+  .header-nav-link:hover {
+    color: var(--color-accent-primary);
+  }
+
+  .header-nav-link-underline {
+    background-color: var(--color-accent-primary);
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full;
+  }
+
+  .header-button {
+    color: var(--color-text-tertiary);
+    @apply w-9 h-9 flex items-center justify-center rounded-lg transition-colors;
+  }
+
+  .header-button:hover {
+    background-color: var(--color-bg-tertiary);
+  }
+
+  .header-mobile-menu {
+    background-color: rgba(2, 6, 23, 0.95);
+    border-color: var(--color-border-primary);
+  }
+
+  .light .header-mobile-menu {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-color: var(--color-border-secondary);
+  }
+
+  .header-mobile-link {
+    color: var(--color-text-secondary);
+    @apply block px-3 py-2 rounded-lg text-base font-medium transition-colors;
+  }
+
+  .header-mobile-link:hover {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-accent-primary);
+  }
+
+  .header-mobile-divider {
+    border-color: var(--color-border-secondary);
+  }
+
+  /* Contact Section */
+  .contact-copy-button {
+    color: var(--color-text-tertiary);
+    @apply w-9 h-9 ml-2 rounded-lg transition-all focus:outline-none flex items-center justify-center;
+  }
+
+  .contact-copy-button:hover {
+    color: var(--color-accent-primary);
+    background-color: var(--color-bg-tertiary);
+  }
+}

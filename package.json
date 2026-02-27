@@ -1,0 +1,23 @@
+{
+  "name": "portafolios",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start:build": "nuxt build",
+    "start:dev": "nuxt dev --host",
+    "start:generate": "nuxt generate",
+    "start:preview": "nuxt preview",
+    "start:postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^2.2.1",
+    "@tailwindcss/vite": "^4.1.18",
+    "nuxt": "^4.3.1",
+    "tailwindcss": "^4.1.18",
+    "vue": "^3.5.27",
+    "vue-router": "^5.0.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0"
+  }
+}
