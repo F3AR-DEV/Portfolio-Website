@@ -1,11 +1,11 @@
 <template>
     <div class="w-full lg:w-1/2 lg:pl-5">
-        <h2 class="section-title mb-8">Habilidades Técnicas</h2>
+        <h2 class="section-title mb-8">{{ $t('profile.skills.title') }}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <SkillGroup title="Lenguajes" icon="bi:code-square" :skills="languages" />
-            <SkillGroup title="Frameworks y Librerías" icon="bi:layers" :skills="frameworks" />
-            <SkillGroup title="Bases de Datos" icon="bi:database" :skills="databases" />
-            <SkillGroup title="Herramientas" icon="bi:tools" :skills="tools" />
+            <SkillGroup :title="$t('profile.skills.languages')" icon="bi:code-square" :skills="languages" />
+            <SkillGroup :title="$t('profile.skills.frameworks')" icon="bi:layers" :skills="frameworks" />
+            <SkillGroup :title="$t('profile.skills.databases')" icon="bi:database" :skills="databases" />
+            <SkillGroup :title="$t('profile.skills.tools')" icon="bi:tools" :skills="tools" />
         </div>
     </div>
 </template>

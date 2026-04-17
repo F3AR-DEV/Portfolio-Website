@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "logo": "Portfolio",
+    "home": "Home",
+    "profile": "Profile",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "download_cv": "Download CV",
+    "change_theme": "Toggle theme",
+    "change_language": "Translate"
+  },
+  "hero": {
+    "greeting": "Hello, I am",
+    "role1": "Systems Engineer",
+    "role2": "Full Stack Developer",
+    "description": "With 3 years of experience in software development. I design and develop scalable technological solutions, based on a solid architecture, optimal performance, and high quality standards.",
+    "location": "Managua, Managua, Nicaragua",
+    "available": "Available for new projects"
+  },
+  "profile": {
+    "title": "Professional Profile",
+    "p1": "I am a Systems Engineer with experience in web, mobile, and desktop application development. I focus on building functional, clear, and well-structured solutions.",
+    "p2": "I work in an organized way, with attention to detail and commitment to quality. I prioritize maintainability, performance, and the proper implementation of each system.",
+    "p3": "I adapt to different environments and technologies according to project needs, maintaining a constant learning attitude and continuous improvement.",
+    "skills": {
+      "title": "Technical Skills",
+      "languages": "Languages",
+      "frameworks": "Frameworks & Libraries",
+      "databases": "Databases",
+      "tools": "Tools"
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "intro": "Here is a quick summary of my most recent experiences:",
+    "jobs": [
+      {
+        "company": "Banco de Fomento a la Producción (BFP)",
+        "role": "Quality Assurance Agent - Professional Service",
+        "date": "Jun 2024 - Aug 2025",
+        "items": [
+          "Resolution of technical incidents related to accounts, loans, and API services.",
+          "Execution of functional and UAT tests of the core banking system (e-IBS Datapro).",
+          "Participation in production deployments and post-launch validations.",
+          "Supervision and validation of BPM flows and online banking processes.",
+          "Analysis of functional requirements and coordination with technical teams.",
+          "Optimization of operational processes through continuous monitoring and validation."
+        ]
+      },
+      {
+        "company": "Corte Suprema de Justicia (CSJ)",
+        "role": "Programmer Analyst - Professional Service",
+        "date": "Jun 2023 - Jan 2024",
+        "items": [
+          "Development and maintenance of internal applications using C# and .NET.",
+          "Construction of web interfaces with Vue.js.",
+          "Management and queries in SQL Server databases.",
+          "Integration and consumption of Google APIs.",
+          "Technical support and continuous improvement of institutional systems."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "A selection of my work.",
+    "list": [
+      {
+        "title": "AuthApi .NET",
+        "description": "Authentication and User Management System implementing secure patterns with JWT, Refresh Tokens, and role-based access control (RBAC)."
+      },
+      {
+        "title": "Production and Inventory Management System",
+        "description": "Stock MGM is a comprehensive system to plan and control production processes. It includes Inventory Management (EOQ), Material Requirements Planning (MRP), and Aggregate Planning modules."
+      },
+      {
+        "title": "My Professional Portfolio",
+        "description": "Personal Web Platform built with modern technologies to showcase trajectory and projects. Focused on performance, accessibility, and responsive design."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Do you have a project in mind? Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
+    "findMe": "You can also find me on these platforms!"
+  },
+  "footer": {
+    "copyright1": "Designed and coded with",
+    "copyright2": "by me",
+    "inspired": "Inspired by the work of"
+  }
+}

@@ -5,28 +5,24 @@ import AppButton from '~/shared/widgets/AppButton.vue';
 <template>
     <div class="w-full lg:w-7/12 order-2 lg:order-1 text-center lg:text-left">
         <h1 class="hero-title">
-            Hola, soy <span style="color: var(--color-accent-primary);">Fredd</span> <span
+            {{ $t('hero.greeting') }} <span style="color: var(--color-accent-primary);">Fredd</span> <span
                 class="inline-block animate-waveorigin-70 animate-wave">👋</span>
         </h1>
         <h2 class="text-xl lg:text-2xl font-bold mb-4">
             <span
-                class="bg-clip-text text-transparent bg-linear-to-r from-(--color-accent-primary) to-(--color-accent-secondary)">Ingeniero
-                de Sistemas</span>
+                class="bg-clip-text text-transparent bg-linear-to-r from-(--color-accent-primary) to-(--color-accent-secondary)">{{ $t('hero.role1') }}</span>
             <span class="text-white mx-2">|</span>
             <span
-                class="bg-clip-text text-transparent bg-linear-to-r from-(--color-accent-primary) to-(--color-accent-secondary)">Desarrollador
-                Full Stack</span>
+                class="bg-clip-text text-transparent bg-linear-to-r from-(--color-accent-primary) to-(--color-accent-secondary)">{{ $t('hero.role2') }}</span>
         </h2>
         <p class="hero-text max-w-2xl mx-auto lg:mx-0">
-            Con 3 años de experiencia en desarrollo de software.
-            Diseño y desarrollo soluciones tecnológicas escalables, fundamentadas en una arquitectura sólida,
-            rendimiento óptimo y altos estándares de calidad.
+            {{ $t('hero.description') }}
         </p>
 
         <div class="flex flex-col gap-2 mb-8" style="color: var(--color-text-secondary);">
             <div class="flex items-center justify-center lg:justify-start gap-3">
                 <Icon name="bi:geo-alt" class="text-xl" />
-                <span>Managua, Managua, Nicaragua</span>
+                <span>{{ $t('hero.location') }}</span>
             </div>
             <div class="flex items-center justify-center lg:justify-start gap-3">
                 <Icon name="bi:envelope" class="text-xl" />
@@ -45,7 +41,7 @@ import AppButton from '~/shared/widgets/AppButton.vue';
                         style="background-color: var(--color-accent-primary);">
                     </span>
                 </span>
-                <span>Disponible para nuevos proyectos</span>
+                <span>{{ $t('hero.available') }}</span>
             </div>
         </div>
 

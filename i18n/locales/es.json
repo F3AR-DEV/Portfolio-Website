@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "logo": "Portafolio",
+    "home": "Inicio",
+    "profile": "Perfil",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "download_cv": "Descargar CV",
+    "change_theme": "Cambiar tema",
+    "change_language": "Cambiar idioma"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role1": "Ingeniero de Sistemas",
+    "role2": "Desarrollador Full Stack",
+    "description": "Con 3 años de experiencia en desarrollo de software. Diseño y desarrollo soluciones tecnológicas escalables, fundamentadas en una arquitectura sólida, rendimiento óptimo y altos estándares de calidad.",
+    "location": "Managua, Managua, Nicaragua",
+    "available": "Disponible para nuevos proyectos"
+  },
+  "profile": {
+    "title": "Perfil Profesional",
+    "p1": "Soy Ingeniero de Sistemas con experiencia en el desarrollo de aplicaciones web, móviles y de escritorio. Me enfoco en construir soluciones funcionales, claras y bien estructuradas.",
+    "p2": "Trabajo de manera organizada, con atención al detalle y compromiso con la calidad. Prioritizo la mantenibilidad, el rendimiento y la correcta implementación de cada sistema.",
+    "p3": "Me adapto a diferentes entornos y tecnologías según las necesidades del proyecto, manteniendo una actitud de aprendizaje constante y mejora continua.",
+    "skills": {
+      "title": "Habilidades Técnicas",
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks y Librerías",
+      "databases": "Bases de Datos",
+      "tools": "Herramientas"
+    }
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "intro": "Aquí tienes un resumen rápido de mis experiencias más recientes:",
+    "jobs": [
+      {
+        "company": "Banco de Fomento a la Producción (BFP)",
+        "role": "Oficial de Calidad – Servicio Profesional",
+        "date": "Jun 2024 – Ago 2025",
+        "items": [
+          "Resolución de incidencias técnicas relacionadas con cuentas, préstamos y servicios API.",
+          "Ejecución de pruebas funcionales y pruebas UAT del core bancario (e-IBS Datapro).",
+          "Participación en despliegues a producción y validaciones posteriores al lanzamiento.",
+          "Supervisión y validación de flujos BPM y procesos de banca en línea.",
+          "Análisis de requerimientos funcionales y coordinación con equipos técnicos.",
+          "Optimización de procesos operativos mediante seguimiento y validación continua."
+        ]
+      },
+      {
+        "company": "Corte Suprema de Justicia (CSJ)",
+        "role": "Analista Programador – Servicio Profesional",
+        "date": "Jun 2023 – Ene 2024",
+        "items": [
+          "Desarrollo y mantenimiento de aplicaciones internas utilizando C# y .NET.",
+          "Construcción de interfaces web con Vue.js.",
+          "Gestión y consultas en bases de datos SQL Server.",
+          "Integración y consumo de APIs de Google.",
+          "Soporte técnico y mejora continua de sistemas institucionales."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "intro": "Una selección de mis trabajos.",
+    "list": [
+      {
+        "title": "AuthApi .NET",
+        "description": "Sistema de Autenticación y Gestión de Usuarios que implementa patrones seguros con JWT, Refresh Tokens y control de acceso basado en roles (RBAC)."
+      },
+      {
+        "title": "Sistema de Gestión de Producción e Inventarios",
+        "description": "Stock MGM es un sistema integral para planificar y controlar procesos productivos. Incluye módulos de Gestión de Inventarios (EOQ), Planeación de Requerimientos de Materiales (MRP) y Planeación Agregada."
+      },
+      {
+        "title": "Mi Portafolio Profesional",
+        "description": "Plataforma web personal construida con tecnologías modernas para exhibir trayectoria y proyectos. Enfocada en rendimiento, accesibilidad y diseño responsivo."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "text": "¿Tienes un proyecto en mente? No dudes en contactarme si estás buscando un desarrollador, tienes una consulta o simplemente quieres conectar.",
+    "findMe": "¡También puedes encontrarme en estas plataformas!"
+  },
+  "footer": {
+    "copyright1": "Diseñado y programado con",
+    "copyright2": "por mí",
+    "inspired": "Inspirado en el trabajo de"
+  }
+}

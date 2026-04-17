@@ -22,12 +22,12 @@
                 <!-- Copyright -->
                 <div>
                     <p class="text-sm" style="color: var(--color-text-tertiary);">
-                        &copy; 2022 - {{ new Date().getFullYear() }} | Diseñado y programado con
+                        &copy; 2022 - {{ new Date().getFullYear() }} | {{ $t('footer.copyright1') }}
                         <Icon name="bi:heart-fill" class="text-red-500 mx-1 animate-pulse" />
-                        por mí
+                        {{ $t('footer.copyright2') }}
                     </p>
                     <p class="text-xs mt-2" style="color: var(--color-text-tertiary); opacity: 0.8;">
-                        Inspirado en el trabajo de
+                        {{ $t('footer.inspired') }}
                         <a href="https://www.figma.com/community/file/1262992249991763120" target="_blank"
                             rel="noopener noreferrer"
                             class="hover:text-(--color-accent-primary) underline underline-offset-4 transition-colors">

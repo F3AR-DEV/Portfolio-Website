@@ -9,30 +9,27 @@
                 <!-- Logo -->
                 <a href="#hero"
                     class="text-xl font-bold tracking-tight header-logo hover:scale-105 transition-transform duration-200">
-                    Portafolio
+                    {{ $t('nav.logo') }}
                 </a>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-6 ml-auto">
                     <a v-for="item in navItems" :key="item.href" :href="item.href" class="header-nav-link group">
-                        {{ item.label }}
+                        {{ $t(item.labelKey) }}
                         <span class="header-nav-link-underline"></span>
                     </a>
                 </div>
 
                 <!-- Right Side Utils -->
                 <div class="hidden md:flex items-center space-x-1 ml-4">
-                    <!-- <button @click="toggleLanguage" class="header-button" title="Cambiar idioma">
+                    <button @click="toggleLanguage" class="header-button" :title="$t('nav.change_language')">
                         <span class="text-xs font-bold">{{ locale.toUpperCase() }}</span>
-                    </button> -->
-
-                    <!-- <button @click="toggleTheme" class="header-button" title="Cambiar tema">
-                        <Icon v-if="isDark" name="bi:sun-fill" class="text-lg" />
-                        <Icon v-else name="bi:moon-stars-fill" class="text-lg" />
-                    </button> -->
+                    </button>
 
                     <div class="h-6 w-px bg-gray-300 dark:bg-gray-700 mx-2"></div>
-                    <AppButton href="/assets/pdf/CV_FreddAvilez.pdf" download class="ml-2">Descargar CV</AppButton>
+                    <AppButton :href="`/assets/pdf/CV_FreddAvilez_${locale}.pdf`" download class="ml-2">{{
+                        $t('nav.download_cv') }}
+                    </AppButton>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -50,19 +47,17 @@
                 <div class="px-4 pt-2 pb-6 space-y-2">
                     <a v-for="item in navItems" :key="item.href" :href="item.href" @click="isMenuOpen = false"
                         class="header-mobile-link">
-                        {{ item.label }}
+                        {{ $t(item.labelKey) }}
                     </a>
                     <div class="pt-4 flex items-center justify-between border-t header-mobile-divider mt-4">
                         <div class="flex items-center space-x-2">
-                            <!-- <button @click="toggleLanguage" class="header-button">
+                            <button @click="toggleLanguage" class="header-button">
                                 {{ locale.toUpperCase() }}
-                            </button> -->
-                            <button @click="toggleTheme" class="header-button">
-                                <Icon v-if="isDark" name="bi:sun-fill" />
-                                <Icon v-else name="bi:moon-stars-fill" />
                             </button>
                         </div>
-                        <AppButton href="/assets/pdf/CV_FreddAvilez.pdf" download size="sm">Descargar CV</AppButton>
+                        <AppButton :href="`/assets/pdf/CV_FreddAvilez_${locale}.pdf`" download size="sm">{{
+                            $t('nav.download_cv') }}
+                        </AppButton>
                     </div>
                 </div>
             </div>
@@ -77,61 +72,30 @@ import AppButton from '~/shared/widgets/AppButton.vue';
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
-const isDark = ref(true);
-const locale = useState("locale", () => "en");
+const { locale, setLocale } = useI18n();
 
 const navItems = [
-    { label: "Inicio", href: "#hero" },
-    { label: "Perfil", href: "#profile" },
-    { label: "Experiencia", href: "#experience" },
-    { label: "Proyectos", href: "#projects" },
-    { label: "Contacto", href: "#contact" },
+    { labelKey: "nav.home", href: "#hero" },
+    { labelKey: "nav.profile", href: "#profile" },
+    { labelKey: "nav.experience", href: "#experience" },
+    { labelKey: "nav.projects", href: "#projects" },
+    { labelKey: "nav.contact", href: "#contact" },
 ];
 
 const handleScroll = () => {
     isScrolled.value = window.scrollY > 20;
 };
 
-const toggleTheme = () => {
-    isDark.value = !isDark.value;
-    updateTheme();
-};
-
-const updateTheme = () => {
-    if (isDark.value) {
-        document.documentElement.classList.remove("light");
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-    } else {
-        document.documentElement.classList.add("light");
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-    }
-};
-
 const toggleLanguage = () => {
-    locale.value = locale.value === "en" ? "es" : "en";
-    localStorage.setItem("locale", locale.value);
+    setLocale(locale.value === "en" ? "es" : "en");
 };
 
 onMounted(() => {
     window.addEventListener("scroll", handleScroll);
 
-    // Init Theme
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        isDark.value = savedTheme === "dark";
-    } else {
-        // Default to dark mode (isDark = true)
-        isDark.value = true;
-    }
-    updateTheme();
-
-    // Init Locale
-    const savedLocale = localStorage.getItem("locale");
-    if (savedLocale) {
-        locale.value = savedLocale;
-    }
+    // Apply dark theme globally
+    document.documentElement.classList.remove("light");
+    document.documentElement.classList.add("dark");
 });
 
 onUnmounted(() => {
